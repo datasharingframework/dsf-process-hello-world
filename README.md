@@ -1,4 +1,4 @@
-# DSF Process Allow-List
+# DSF Process Hello-World
 
 In this repository you will find the hello-world process, which can be deployed on the [DSF](https://github.com/datasharingframework/dsf).
 
