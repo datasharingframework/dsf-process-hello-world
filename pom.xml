@@ -1,36 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.highmed.dsf</groupId>
-	<artifactId>dsf-bpe-example-processes-pom</artifactId>
-	<version>0.9.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>dsf-bpe-process-hello-world</module>
-	</modules>
+	<groupId>dev.dsf</groupId>
+	<artifactId>dsf-process-hello-world</artifactId>
+	<version>1.0.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<compileSource>11</compileSource>
-		<compileTarget>11</compileTarget>
+		<compileSource>17</compileSource>
+		<compileTarget>17</compileTarget>
 
-		<dsf.version>0.9.0</dsf.version>
-
-		<main.basedir>${project.basedir}</main.basedir>
+		<dsf.version>1.0.0-SNAPSHOT</dsf.version>
+		<dsf.location>../dsf</dsf.location>
 	</properties>
 
-	<name>example-processes</name>
-	<description>Example processes to be deployed on the HiGHmed DSF</description>
-	<url>https://github.com/highmed/example-processes</url>
+	<name>dsf-process-hello-world</name>
+	<description>Hello World DSF process</description>
+	<url>https://github.com/datasharingframework/dsf-process-hello-world</url>
 
 	<scm>
-		<connection>scm:git:git://github.com/highmed/example-processes.git</connection>
-		<developerConnection>scm:git:git@github.com:highmed/example-processes.git</developerConnection>
-		<url>https://github.com/highmed/example-processes</url>
+		<connection>scm:git:git://github.com/datasharingframework/dsf-process-hello-world.git</connection>
+		<developerConnection>scm:git:git@github.com:datasharingframework/dsf-process-hello-world.git</developerConnection>
+		<url>https://github.com/datasharingframework/dsf-process-hello-wold</url>
 	</scm>
 
 	<licenses>
@@ -41,113 +35,91 @@
 		</license>
 	</licenses>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- highmed-dsf -->
-			<dependency>
-				<groupId>org.highmed.dsf</groupId>
-				<artifactId>dsf-bpe-process-base</artifactId>
-				<version>${dsf.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.highmed.dsf</groupId>
-				<artifactId>dsf-bpe-process-hello-world</artifactId>
-				<version>${dsf.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.highmed.dsf</groupId>
-				<artifactId>dsf-fhir-validation</artifactId>
-				<version>${dsf.version}</version>
-			</dependency>
+	<dependencies>
+		<dependency>
+			<groupId>dev.dsf</groupId>
+			<artifactId>dsf-bpe-process-api-v1</artifactId>
+			<version>${dsf.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<!-- hhn rwh -->
-			<dependency>
-				<groupId>de.hs-heilbronn.mi</groupId>
-				<artifactId>log4j2-utils</artifactId>
-				<version>0.13.0</version>
-			</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.7</version>
+			<scope>provided</scope>
+		</dependency>
 
-			<!-- testing -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.13.2</version>
-			</dependency>
-			<dependency>
-				<groupId>org.highmed.dsf</groupId>
-				<artifactId>dsf-bpe-process-base</artifactId>
-				<version>${dsf.version}</version>
-				<scope>test</scope>
-				<type>test-jar</type>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+		<!-- testing -->
+		<dependency>
+			<groupId>dev.dsf</groupId>
+			<artifactId>dsf-bpe-process-api-v1</artifactId>
+			<version>${dsf.version}</version>
+			<scope>test</scope>
+			<type>test-jar</type>
+		</dependency>
+		<dependency>
+			<groupId>dev.dsf</groupId>
+			<artifactId>dsf-fhir-validation</artifactId>
+			<version>${dsf.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.10.1</version>
-					<configuration>
-						<source>${compileSource}</source>
-						<target>${compileTarget}</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M5</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.2.2</version>
-					<configuration>
-						<archive>
-							<manifest>
-								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-							</manifest>
-							<manifestEntries>
-								<Implementation-Build>${buildNumber}</Implementation-Build>
-								<Implementation-Branch>${scmBranch}</Implementation-Branch>
-							</manifestEntries>
-						</archive>
-					</configuration>
-				</plugin>
-				<!--
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-shade-plugin</artifactId>
-					<version>3.2.4</version>
-				</plugin>
-				-->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.3.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.1.0</version>
-				</plugin>
-				<plugin>
-					<groupId>net.revelc.code.formatter</groupId>
-					<artifactId>formatter-maven-plugin</artifactId>
-					<version>2.18.0</version>
-				</plugin>
-				<plugin>
-					<groupId>net.revelc.code</groupId>
-					<artifactId>impsort-maven-plugin</artifactId>
-					<version>1.6.2</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>${compileSource}</source>
+					<target>${compileTarget}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+							<Implementation-Branch>${scmBranch}</Implementation-Branch>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.4.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.5.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
@@ -168,17 +140,36 @@
 			<plugin>
 				<groupId>net.revelc.code.formatter</groupId>
 				<artifactId>formatter-maven-plugin</artifactId>
+				<version>2.22.0</version>
 				<configuration>
-					<configFile>${main.basedir}/src/main/resources/eclipse-formatter-config.xml</configFile>
+					<configFile>eclipse-formatter-config.xml</configFile>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>net.revelc.code</groupId>
 				<artifactId>impsort-maven-plugin</artifactId>
+				<version>1.8.0</version>
 				<configuration>
-					<compliance>11</compliance>
+					<compliance>17</compliance>
 					<groups>java.,javax.,org.,com.</groups>
 					<staticGroups>java,*</staticGroups>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>dev.dsf</groupId>
+				<artifactId>dsf-tools-documentation-generator</artifactId>
+				<version>${dsf.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<workingPackages>
+						<workingPackage>dev.dsf.bpe</workingPackage>
+					</workingPackages>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -191,18 +182,15 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/highmed/example-processes</url>
+			<url>https://maven.pkg.github.com/datasharingframework/dsf-process-hello-world</url>
 		</repository>
 	</distributionManagement>
 
 	<repositories>
 		<repository>
 			<id>github</id>
-			<name>GitHub HiGHmed Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/highmed/highmed-dsf</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
+			<name>GitHub DSF Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/datasharingframework/dsf</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -210,6 +198,39 @@
 	</repositories>
 
 	<profiles>
+		<profile>
+			<id>validate-and-check</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>net.revelc.code.formatter</groupId>
+						<artifactId>formatter-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>validate</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>net.revelc.code</groupId>
+						<artifactId>impsort-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 		<profile>
 			<id>format-and-sort</id>
 
@@ -241,34 +262,71 @@
 			</build>
 		</profile>
 		<profile>
-			<id>validate-and-check</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+			<id>copy-to-dsf</id>
 
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>net.revelc.code.formatter</groupId>
-						<artifactId>formatter-maven-plugin</artifactId>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
 						<executions>
 							<execution>
+								<id>copy-process-plugin-to-docker-test-setup</id>
+								<phase>package</phase>
 								<goals>
-									<goal>validate</goal>
+									<goal>copy</goal>
 								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>${project.groupId}</groupId>
+											<artifactId>${project.artifactId}</artifactId>
+											<version>${project.version}</version>
+										</artifactItem>
+									</artifactItems>
+									<outputDirectory>${dsf.location}/dsf-docker-test-setup/bpe/process</outputDirectory>
+								</configuration>
+							</execution>
+							<execution>
+								<id>copy-process-plugin-to-docker-test-setup-3dic-ttp/dic1</id>
+								<phase>package</phase>
+								<goals>
+									<goal>copy</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>${project.groupId}</groupId>
+											<artifactId>${project.artifactId}</artifactId>
+											<version>${project.version}</version>
+										</artifactItem>
+									</artifactItems>
+									<outputDirectory>${dsf.location}/dsf-docker-test-setup-3dic-ttp/dic1/bpe/process</outputDirectory>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
 					<plugin>
-						<groupId>net.revelc.code</groupId>
-						<artifactId>impsort-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-clean-plugin</artifactId>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>${dsf.location}/dsf-docker-test-setup/bpe/process</directory>
+									<includes>
+										<include>${project.artifactId}-${project.version}.jar</include>
+									</includes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>${dsf.location}/dsf-docker-test-setup-3dic-ttp/dic1/bpe/process</directory>
+									<includes>
+										<include>${project.artifactId}-${project.version}.jar</include>
+									</includes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+							</filesets>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
