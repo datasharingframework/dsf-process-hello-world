@@ -6,7 +6,6 @@ import org.hl7.fhir.r4.model.ResourceType;
 import org.hl7.fhir.r4.model.StringType;
 import org.hl7.fhir.r4.model.Task;
 
-import ca.uhn.fhir.context.FhirContext;
 import dev.dsf.bpe.ConstantsHelloWorld;
 import dev.dsf.bpe.HelloWorldProcessPluginDefinition;
 import dev.dsf.bpe.v1.constants.CodeSystems;

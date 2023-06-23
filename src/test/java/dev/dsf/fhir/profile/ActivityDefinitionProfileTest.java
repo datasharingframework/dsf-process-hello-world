@@ -1,7 +1,5 @@
 package dev.dsf.fhir.profile;
 
-import static dev.dsf.bpe.HelloWorldProcessPluginDefinition.RELEASE_DATE;
-import static dev.dsf.bpe.HelloWorldProcessPluginDefinition.VERSION;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

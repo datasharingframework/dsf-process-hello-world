@@ -1,21 +1,15 @@
 package dev.dsf.bpe.start;
 
-import java.util.Collections;
 import java.util.Date;
-import java.util.Map;
 
-import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.ResourceType;
 import org.hl7.fhir.r4.model.StringType;
 import org.hl7.fhir.r4.model.Task;
 
-import ca.uhn.fhir.context.FhirContext;
 import dev.dsf.bpe.ConstantsHelloWorld;
 import dev.dsf.bpe.HelloWorldProcessPluginDefinition;
 import dev.dsf.bpe.v1.constants.CodeSystems;
 import dev.dsf.bpe.v1.constants.NamingSystems;
-import dev.dsf.fhir.client.FhirWebserviceClient;
 
 public class HelloWorldExampleStarter
 {
