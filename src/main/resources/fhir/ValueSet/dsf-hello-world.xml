@@ -1,0 +1,27 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<meta>
+		<tag>
+			<system value="http://dsf.dev/fhir/CodeSystem/read-access-tag" />
+			<code value="ALL" />
+		</tag>
+	</meta>
+	<url value="http://dsf.dev/fhir/ValueSet/hello-world" />
+	<!-- version managed by bpe -->
+	<version value="#{version}" />
+	<name value="DSF_Hello_World" />
+	<title value="DSF Hello World" />
+	<!-- status managed by bpe -->
+	<status value="unknown" />
+	<experimental value="false" />
+	<!-- date managed by bpe -->
+	<date value="#{date}" />
+	<publisher value="DSF" />
+	<description value="ValueSet with standard values for the hello world process" />
+	<immutable value="true" />
+	<compose>
+		<include>
+			<system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+			<version value="#{version}" />
+		</include>
+	</compose>
+</ValueSet> 

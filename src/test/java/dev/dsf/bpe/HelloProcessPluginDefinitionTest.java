@@ -20,7 +20,7 @@ public class HelloProcessPluginDefinitionTest
 
 		var helloWorld = resourcesByProcessId.get(ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_WORLD);
 		assertNotNull(helloWorld);
-		assertEquals(3, helloWorld.stream().filter(this::exists).count());
+		assertEquals(5, helloWorld.stream().filter(this::exists).count());
 
 		var helloUser = resourcesByProcessId.get(ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_USER);
 		assertNotNull(helloUser);

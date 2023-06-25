@@ -1,0 +1,89 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<meta>
+		<tag>
+			<system value="http://dsf.dev/fhir/CodeSystem/read-access-tag" />
+			<code value="ALL" />
+		</tag>
+	</meta>
+	<url value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+	<!-- version managed by bpe -->
+	<version value="#{version}" />
+	<name value="DSF_Hello_World" />
+	<title value="DSF Hello World" />
+	<!-- status managed by bpe -->
+	<status value="unknown" />
+	<experimental value="false" />
+	<!-- date managed by bpe -->
+	<date value="#{date}" />
+	<publisher value="DSF" />
+	<description value="CodeSystem with standard values for the hello world process" />
+	<caseSensitive value="true" />
+	<hierarchyMeaning value="grouped-by" />
+	<versionNeeded value="false" />
+	<content value="complete" />
+	<concept>
+		<code value="string-example" />
+		<display value="String Example" />
+		<definition value="Example string input value" />
+	</concept>
+	<concept>
+		<code value="integer-example" />
+		<display value="Integer Example" />
+		<definition value="Example integer input value" />
+	</concept>
+	<concept>
+		<code value="decimal-example" />
+		<display value="Decimal Example" />
+		<definition value="Example decimal input value" />
+	</concept>
+	<concept>
+		<code value="boolean-example" />
+		<display value="Boolean Example" />
+		<definition value="Example boolean input value" />
+	</concept>
+	<concept>
+		<code value="date-example" />
+		<display value="Date Example" />
+		<definition value="Example date input value" />
+	</concept>
+	<concept>
+		<code value="time-example" />
+		<display value="Time Example" />
+		<definition value="Example time input value" />
+	</concept>
+	<concept>
+		<code value="date-time-example" />
+		<display value="Date/Time Example" />
+		<definition value="Example date/time input value" />
+	</concept>
+	<concept>
+		<code value="instant-example" />
+		<display value="Instant Example" />
+		<definition value="Example instant input value" />
+	</concept>
+	<concept>
+		<code value="uri-example" />
+		<display value="URI Example" />
+		<definition value="Example uri input value" />
+	</concept>
+	<concept>
+		<code value="reference-example" />
+		<display value="Reference Example" />
+		<definition value="Example reference input value" />
+	</concept>
+	<concept>
+		<code value="reference-identifier-example" />
+		<display value="Reference-Identifier Example" />
+		<definition value="Example reference-identifier input value" />
+	</concept>
+	<concept>
+		<code value="identifier-example" />
+		<display value="Identifier Example" />
+		<definition value="Example identifier input value" />
+	</concept>
+	<concept>
+		<code value="coding-example" />
+		<display value="Coding Example" />
+		<definition value="Example coding input value" />
+	</concept>
+</CodeSystem> 

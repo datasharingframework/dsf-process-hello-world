@@ -49,17 +49,21 @@ public class HelloWorldProcessPluginDefinition implements ProcessPluginDefinitio
 		var aHelloUser = "fhir/ActivityDefinition/dsf-hello-user.xml";
 		var aHelloWorld = "fhir/ActivityDefinition/dsf-hello-world.xml";
 
-		var qHelloWorld = "fhir/Questionnaire/dsf-hello-user.xml";
+		var cHelloWorld = "fhir/CodeSystem/dsf-hello-world.xml";
 
-		var tHelloUser = "fhir/Task/dsf-task-hello-user.xml";
-		var tHelloWorld = "fhir/Task/dsf-task-hello-world.xml";
+		var qHelloWorld = "fhir/Questionnaire/dsf-hello-user.xml";
 
 		var sHelloUser = "fhir/StructureDefinition/dsf-task-hello-user.xml";
 		var sHelloWorld = "fhir/StructureDefinition/dsf-task-hello-world.xml";
 
+		var tHelloUser = "fhir/Task/dsf-task-hello-user.xml";
+		var tHelloWorld = "fhir/Task/dsf-task-hello-world.xml";
+
+		var vHelloWorld = "fhir/ValueSet/dsf-hello-world.xml";
+
 		return Map.of(ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_USER,
 				Arrays.asList(aHelloUser, qHelloWorld, sHelloUser, tHelloUser),
 				ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_WORLD,
-				Arrays.asList(aHelloWorld, sHelloWorld, tHelloWorld));
+				Arrays.asList(aHelloWorld, cHelloWorld, sHelloWorld, tHelloWorld, vHelloWorld));
 	}
 }

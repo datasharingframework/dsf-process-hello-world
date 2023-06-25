@@ -37,9 +37,10 @@ public class ActivityDefinitionProfileTest
 					"dsf-coding-process-authorization-remote-all-1.0.0.xml",
 					"dsf-coding-process-authorization-remote-consortium-role-1.0.0.xml",
 					"dsf-coding-process-authorization-remote-organization-1.0.0.xml"),
-			Arrays.asList("dsf-read-access-tag-1.0.0.xml", "dsf-process-authorization-1.0.0.xml"),
+			Arrays.asList("dsf-read-access-tag-1.0.0.xml", "dsf-process-authorization-1.0.0.xml",
+					"dsf-hello-world.xml"),
 			Arrays.asList("dsf-read-access-tag-1.0.0.xml", "dsf-process-authorization-recipient-1.0.0.xml",
-					"dsf-process-authorization-requester-1.0.0.xml"));
+					"dsf-process-authorization-requester-1.0.0.xml", "dsf-hello-world.xml"));
 
 	private final ResourceValidator resourceValidator = new ResourceValidatorImpl(validationRule.getFhirContext(),
 			validationRule.getValidationSupport());

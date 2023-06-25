@@ -30,7 +30,7 @@
         <valueString value="Parameter" />
       </extension>
       <path value="Task.input" />
-      <max value="2" />
+      <max value="15" />
     </element>
     <element id="Task.input:message-name">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -50,6 +50,500 @@
       <path value="Task.input" />
       <sliceName value="correlation-key" />
       <max value="0" />
+    </element>
+    <element id="Task.input:string-example">
+      <path value="Task.input" />
+      <sliceName value="string-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:string-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:string-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:string-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:string-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="string-example" />
+    </element>
+    <element id="Task.input:string-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:integer-example">
+      <path value="Task.input" />
+      <sliceName value="integer-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:integer-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:integer-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:integer-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:integer-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="integer-example" />
+    </element>
+    <element id="Task.input:integer-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="integer" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:decimal-example">
+      <path value="Task.input" />
+      <sliceName value="decimal-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:decimal-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:decimal-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:decimal-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:decimal-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="decimal-example" />
+    </element>
+    <element id="Task.input:decimal-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:boolean-example">
+      <path value="Task.input" />
+      <sliceName value="boolean-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:boolean-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:boolean-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:boolean-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:boolean-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="boolean-example" />
+    </element>
+    <element id="Task.input:boolean-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:date-example">
+      <path value="Task.input" />
+      <sliceName value="date-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:date-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:date-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:date-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:date-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="date-example" />
+    </element>
+    <element id="Task.input:date-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:time-example">
+      <path value="Task.input" />
+      <sliceName value="time-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:time-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:time-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:time-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:time-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="time-example" />
+    </element>
+    <element id="Task.input:time-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="time" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:date-time-example">
+      <path value="Task.input" />
+      <sliceName value="date-time-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:date-time-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:date-time-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:date-time-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:date-time-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="date-time-example" />
+    </element>
+    <element id="Task.input:date-time-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:instant-example">
+      <path value="Task.input" />
+      <sliceName value="instant-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:instant-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:instant-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:instant-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:instant-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="instant-example" />
+    </element>
+    <element id="Task.input:instant-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="instant" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:uri-example">
+      <path value="Task.input" />
+      <sliceName value="uri-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:uri-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:uri-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:uri-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:uri-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="uri-example" />
+    </element>
+    <element id="Task.input:uri-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="uri" />
+      </type>
+      <min value="1" />
+    </element>
+    <element id="Task.input:reference-example">
+      <path value="Task.input" />
+      <sliceName value="reference-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:reference-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:reference-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:reference-example.type.coding.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:reference-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="reference-example" />
+    </element>
+    <element id="Task.input:reference-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/Patient" />
+      </type>
+    </element>
+    <element id="Task.input:reference-example.value[x].reference">
+      <path value="Task.input.value[x].reference" />
+      <min value="1" />
+    </element>
+    <element id="Task.input:reference-example.value[x].identifier">
+      <path value="Task.input.value[x].identifier" />
+      <max value="0" />
+    </element>
+    <element id="Task.input:reference-identifier-example">
+      <path value="Task.input" />
+      <sliceName value="reference-identifier-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:reference-identifier-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:reference-identifier-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:reference-identifier-example.type.coding.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:reference-identifier-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="reference-identifier-example" />
+    </element>
+    <element id="Task.input:reference-identifier-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/Patient" />
+      </type>
+    </element>
+    <element id="Task.input:reference-identifier-example.value[x].reference">
+      <path value="Task.input.value[x].reference" />
+      <max value="0" />
+    </element>
+    <element id="Task.input:reference-identifier-example.value[x].identifier">
+      <path value="Task.input.value[x].identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.input:identifier-example.value[x].identifier.system">
+      <path value="Task.input.value[x].identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/sid/hello-world-identifier" />
+    </element>
+    <element id="Task.input:identifier-example.value[x].identifier.value">
+      <path value="Task.input.value[x].identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.input:identifier-example">
+      <path value="Task.input" />
+      <sliceName value="identifier-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:identifier-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:identifier-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:identifier-example.type.coding.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:identifier-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="identifier-example" />
+    </element>
+    <element id="Task.input:identifier-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Task.input:identifier-example.value[x].system">
+      <path value="Task.input.value[x].system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/sid/hello-world-identifier" />
+    </element>
+    <element id="Task.input:identifier-example.value[x].value">
+      <path value="Task.input.value[x].value" />
+      <min value="1" />
+    </element>
+    <element id="Task.input:coding-example">
+      <path value="Task.input" />
+      <sliceName value="coding-example" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:coding-example.type">
+      <path value="Task.input.type" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+      </binding>
+    </element>
+    <element id="Task.input:coding-example.type.coding">
+      <path value="Task.input.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:coding-example.system">
+      <path value="Task.input.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+    </element>
+    <element id="Task.input:coding-example.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="coding-example" />
+    </element>
+    <element id="Task.input:coding-example.value[x]">
+      <path value="Task.input.value[x]" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Task.input:coding-example.value[x].system">
+      <path value="Task.input.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="Task.input:coding-example.value[x].code">
+      <path value="Task.input.value[x].code" />
     </element>
   </differential>
 </StructureDefinition>
