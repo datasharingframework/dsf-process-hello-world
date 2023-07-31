@@ -69,10 +69,6 @@ public class TaskProfileTest
 	{
 		Task task = createValidTaskHelloWorld();
 
-		task.addInput().setValue(new StringType("string-value")).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("string-example"));
-		task.addInput().setValue(new IntegerType(1)).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("integer-example"));
 		task.addInput().setValue(new DecimalType(1.1)).getType().addCoding(
 				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("decimal-example"));
 		task.addInput().setValue(new BooleanType(true)).getType().addCoding(
@@ -129,6 +125,11 @@ public class TaskProfileTest
 
 		task.addInput().setValue(new StringType(ConstantsHelloWorld.PROFILE_DSF_TASK_HELLO_WORLD_MESSAGE_NAME))
 				.getType().addCoding(CodeSystems.BpmnMessage.messageName());
+
+		task.addInput().setValue(new StringType("string-value")).getType().addCoding(
+				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("string-example"));
+		task.addInput().setValue(new IntegerType(1)).getType().addCoding(
+				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("integer-example"));
 
 		return task;
 	}

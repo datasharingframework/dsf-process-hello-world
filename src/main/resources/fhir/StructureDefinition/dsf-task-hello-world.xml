@@ -53,7 +53,7 @@
     <element id="Task.input:string-example">
       <path value="Task.input" />
       <sliceName value="string-example" />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
     </element>
     <element id="Task.input:string-example.type">
@@ -88,7 +88,7 @@
     <element id="Task.input:integer-example">
       <path value="Task.input" />
       <sliceName value="integer-example" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Task.input:integer-example.type">
