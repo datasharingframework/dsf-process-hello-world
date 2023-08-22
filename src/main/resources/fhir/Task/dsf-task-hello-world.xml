@@ -1,0 +1,169 @@
+<Task xmlns="http://hl7.org/fhir">
+  <meta>
+    <profile value="http://dsf.dev/fhir/StructureDefinition/task-hello-world|#{version}"/>
+  </meta>
+  <identifier>
+    <system value="http://dsf.dev/sid/task-identifier"/>
+    <value value="http://dsf.dev/bpe/Process/helloWorld/#{version}/task-hello-world"/>
+  </identifier>
+  <instantiatesCanonical value="http://dsf.dev/bpe/Process/helloWorld|#{version}"/>
+  <status value="draft"/>
+  <intent value="order"/>
+  <authoredOn value="#{date}"/>
+  <requester>
+    <type value="Organization"/>
+    <identifier>
+      <system value="http://dsf.dev/sid/organization-identifier"/>
+      <value value="#{organization}"/>
+    </identifier>
+  </requester>
+  <restriction>
+    <recipient>
+      <type value="Organization"/>
+      <identifier>
+        <system value="http://dsf.dev/sid/organization-identifier"/>
+        <value value="#{organization}"/>
+      </identifier>
+    </recipient>
+  </restriction>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/bpmn-message"/>
+        <code value="message-name"/>
+      </coding>
+    </type>
+    <valueString value="helloWorld"/>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="string-example" />
+      </coding>
+    </type>
+    <valueString value="string-value" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="integer-example" />
+      </coding>
+    </type>
+    <valueInteger value="1" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="decimal-example" />
+      </coding>
+    </type>
+    <valueDecimal value="1.1" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="boolean-example" />
+      </coding>
+    </type>
+    <valueBoolean value="true" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="date-example" />
+      </coding>
+    </type>
+    <valueDate value="2023-06-25" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="time-example" />
+      </coding>
+    </type>
+    <valueTime value="10:00:00" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="date-time-example" />
+      </coding>
+    </type>
+    <valueDateTime value="2023-06-25T15:31:19+02:00" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="instant-example" />
+      </coding>
+    </type>
+    <valueInstant value="2023-06-25T15:31:19.984+02:00" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="uri-example" />
+      </coding>
+    </type>
+    <valueUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="reference-example" />
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="http://hl7.org/fhir/Patient/example-id" />
+    </valueReference>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="reference-identifier-example" />
+      </coding>
+    </type>
+    <valueReference>
+      <type value="Patient" />
+      <identifier>
+        <system value="http://dsf.dev/sid/hello-world-identifier" />
+        <value value="identifier-value" />
+      </identifier>
+    </valueReference>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="identifier-example" />
+      </coding>
+    </type>
+    <valueIdentifier>
+      <system value="http://dsf.dev/sid/hello-world-identifier" />
+      <value value="identifier-value" />
+    </valueIdentifier>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+        <code value="coding-example" />
+      </coding>
+    </type>
+    <valueCoding>
+      <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+      <code value="coding-example" />
+    </valueCoding>
+  </input>
+</Task>
