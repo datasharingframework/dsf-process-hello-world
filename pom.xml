@@ -34,7 +34,7 @@
 			<distribution>manual</distribution>
 		</license>
 	</licenses>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>dev.dsf</groupId>
@@ -196,11 +196,28 @@
 			<id>github</id>
 			<name>GitHub DSF Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/datasharingframework/dsf</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
 	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>github</id>
+			<name>GitHub DSF Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/datasharingframework/dsf</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<profiles>
 		<profile>
