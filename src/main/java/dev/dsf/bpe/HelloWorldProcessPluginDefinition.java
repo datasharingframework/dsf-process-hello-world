@@ -11,7 +11,7 @@ import dev.dsf.bpe.v1.ProcessPluginDefinition;
 public class HelloWorldProcessPluginDefinition implements ProcessPluginDefinition
 {
 	public static final String VERSION = "1.5.0.0";
-	public static final LocalDate RELEASE_DATE = LocalDate.of(2023, 5, 20);
+	public static final LocalDate RELEASE_DATE = LocalDate.of(2024, 2, 21);
 
 	@Override
 	public String getName()
