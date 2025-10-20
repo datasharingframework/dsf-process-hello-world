@@ -4,6 +4,7 @@
 			<system value="http://dsf.dev/fhir/CodeSystem/read-access-tag" />
 			<code value="ALL" />
 		</tag>
+		<profile value="http://dsf.dev/fhir/StructureDefinition/activity-definition" />
 	</meta>
 	<extension url="http://dsf.dev/fhir/StructureDefinition/extension-process-authorization">
 		<extension url="message-name">
@@ -23,7 +24,7 @@
 				<extension url="http://dsf.dev/fhir/StructureDefinition/extension-process-authorization-practitioner">
 					<valueCoding>
 						<system value="http://dsf.dev/fhir/CodeSystem/practitioner-role" />
-						<code value="DSF_ADMIN" />
+						<code value="DIC_USER" />
 					</valueCoding>
 				</extension>
 				<system value="http://dsf.dev/fhir/CodeSystem/process-authorization" />
@@ -53,7 +54,7 @@
 		<name value="DSF" />
 		<telecom>
 			<system value="email" />
-			<value value="pmo@dsf.dev" />
+			<value value="dsf-gecko@hs-heilbronn.de" />
 		</telecom>
 	</contact>
 	<description value="Example process as template for implementation of novel processes" />
