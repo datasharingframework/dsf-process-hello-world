@@ -90,6 +90,11 @@
 	<concept>
 		<code value="questionnaire-response-reference" />
 		<display value="QuestionnaireResponse Reference" />
-		<definition value="QuestionnaireResponse reference onput value" />
+		<definition value="QuestionnaireResponse reference input value" />
 	</concept>
-</CodeSystem> 
+	<concept>
+		<code value="quantity-example" />
+		<display value="Quantity Example" />
+		<definition value="Example quantity input value" />
+	</concept>
+</CodeSystem>

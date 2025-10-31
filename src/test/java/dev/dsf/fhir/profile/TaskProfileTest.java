@@ -15,6 +15,7 @@ import org.hl7.fhir.r4.model.DecimalType;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.InstantType;
 import org.hl7.fhir.r4.model.IntegerType;
+import org.hl7.fhir.r4.model.Quantity;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.ResourceType;
 import org.hl7.fhir.r4.model.StringType;
@@ -102,6 +103,11 @@ public class TaskProfileTest
 						new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("coding-example"))
 				.getType().addCoding(
 						new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("coding-example"));
+		task.addInput()
+				.setValue(new Quantity().setSystem("http://unitsofmeasure.org").setCode("m").setUnit("m").setValue(1)
+						.setComparator(Quantity.QuantityComparator.LESS_OR_EQUAL))
+				.getType().addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("quantity-example"));
 
 		ValidationResult result = resourceValidator.validate(task);
 		ValidationSupportRule.logValidationMessages(logger, result);
