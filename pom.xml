@@ -259,34 +259,6 @@
 		</repository>
 	</distributionManagement>
 
-	<repositories>
-		<repository>
-			<id>github</id>
-			<name>GitHub DSF Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/datasharingframework/dsf</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	
-	<pluginRepositories>
-		<pluginRepository>
-			<id>github</id>
-			<name>GitHub DSF Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/datasharingframework/dsf</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<profiles>
 		<profile>
 			<id>validate-and-check</id>
