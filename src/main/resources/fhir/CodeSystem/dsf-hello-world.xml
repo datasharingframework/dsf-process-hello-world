@@ -86,4 +86,9 @@
 		<display value="Coding Example" />
 		<definition value="Example coding input value" />
 	</concept>
+	<concept>
+		<code value="quantity-example" />
+		<display value="Quantity Example" />
+		<definition value="Example quantity input value" />
+	</concept>
 </CodeSystem> 
