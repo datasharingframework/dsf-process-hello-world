@@ -69,10 +69,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:string-example.system">
+		<element id="Task.input:string-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:string-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:string-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -104,10 +109,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:integer-example.system">
+		<element id="Task.input:integer-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:integer-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:integer-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -139,10 +149,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:decimal-example.system">
+		<element id="Task.input:decimal-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:decimal-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:decimal-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -174,10 +189,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:boolean-example.system">
+		<element id="Task.input:boolean-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:boolean-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:boolean-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -209,10 +229,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:date-example.system">
+		<element id="Task.input:date-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:date-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:date-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -244,10 +269,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:time-example.system">
+		<element id="Task.input:time-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:time-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:time-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -279,10 +309,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:date-time-example.system">
+		<element id="Task.input:date-time-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:date-time-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:date-time-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -314,10 +349,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:instant-example.system">
+		<element id="Task.input:instant-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:instant-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:instant-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -349,10 +389,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:uri-example.system">
+		<element id="Task.input:uri-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:uri-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:uri-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -388,6 +433,11 @@
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:reference-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:reference-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -431,6 +481,11 @@
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:reference-identifier-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:reference-identifier-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -484,6 +539,11 @@
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
 		</element>
+		<element id="Task.input:identifier-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
+		</element>
 		<element id="Task.input:identifier-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
 			<min value="1" />
@@ -522,10 +582,15 @@
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="Task.input:coding-example.system">
+		<element id="Task.input:coding-example.type.coding.system">
 			<path value="Task.input.type.coding.system" />
 			<min value="1" />
 			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:coding-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
 		</element>
 		<element id="Task.input:coding-example.type.coding.code">
 			<path value="Task.input.type.coding.code" />
@@ -545,40 +610,45 @@
 		<element id="Task.input:coding-example.value[x].code">
 			<path value="Task.input.value[x].code" />
 		</element>
-      <element id="Task.input:quantity-example">
-        <path value="Task.input" />
-        <sliceName value="quantity-example" />
-        <min value="0" />
-        <max value="1" />
-      </element>
-      <element id="Task.input:quantity-example.type">
-        <path value="Task.input.type" />
-        <binding>
-          <strength value="required" />
-          <valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
-        </binding>
-      </element>
-      <element id="Task.input:quantity-example.type.coding">
-        <path value="Task.input.type.coding" />
-        <min value="1" />
-        <max value="1" />
-      </element>
-      <element id="Task.input:quantity-example.system">
-        <path value="Task.input.type.coding.system" />
-        <min value="1" />
-        <fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
-      </element>
-      <element id="Task.input:quantity-example.type.coding.code">
-        <path value="Task.input.type.coding.code" />
-        <min value="1" />
-        <fixedCode value="quantity-example" />
-      </element>
-      <element id="Task.input:quantity-example.value[x]">
-        <path value="Task.input.value[x]" />
-        <min value="1" />
-        <type>
-          <code value="Quantity" />
-        </type>
-      </element>
+		<element id="Task.input:quantity-example">
+			<path value="Task.input" />
+			<sliceName value="quantity-example" />
+			<min value="0" />
+			<max value="1" />
+		</element>
+		<element id="Task.input:quantity-example.type">
+			<path value="Task.input.type" />
+			<binding>
+				<strength value="required" />
+				<valueSet value="http://dsf.dev/fhir/ValueSet/hello-world|#{version}" />
+			</binding>
+		</element>
+		<element id="Task.input:quantity-example.type.coding">
+			<path value="Task.input.type.coding" />
+			<min value="1" />
+			<max value="1" />
+		</element>
+		<element id="Task.input:quantity-example.type.coding.system">
+			<path value="Task.input.type.coding.system" />
+			<min value="1" />
+			<fixedUri value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+		</element>
+		<element id="Task.input:quantity-example.type.coding.version">
+			<path value="Task.input.type.coding.version" />
+			<min value="1" />
+			<fixedString value="#{version}" />
+		</element>
+		<element id="Task.input:quantity-example.type.coding.code">
+			<path value="Task.input.type.coding.code" />
+			<min value="1" />
+			<fixedCode value="quantity-example" />
+		</element>
+		<element id="Task.input:quantity-example.value[x]">
+			<path value="Task.input.value[x]" />
+			<min value="1" />
+			<type>
+				<code value="Quantity" />
+			</type>
+		</element>
 	</differential>
 </StructureDefinition>

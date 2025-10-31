@@ -71,43 +71,51 @@ public class TaskProfileTest
 	{
 		Task task = createValidTaskHelloWorld();
 
-		task.addInput().setValue(new DecimalType(1.1)).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("decimal-example"));
-		task.addInput().setValue(new BooleanType(true)).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("boolean-example"));
-		task.addInput().setValue(new DateType(new Date())).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("date-example"));
-		task.addInput().setValue(new TimeType("10:00:00")).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("time-example"));
-		task.addInput().setValue(new DateTimeType(new Date())).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("date-time-example"));
-		task.addInput().setValue(new InstantType(new Date())).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("instant-example"));
+		task.addInput().setValue(new DecimalType(1.1)).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("decimal-example").setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new BooleanType(true)).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("boolean-example").setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new DateType(new Date())).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("date-example")
+						.setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new TimeType("10:00:00")).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("time-example")
+						.setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new DateTimeType(new Date())).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("date-time-example").setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new InstantType(new Date())).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("instant-example").setVersion(def.getResourceVersion()));
 		task.addInput().setValue(new UriType("http://dsf.dev/fhir/CodeSystem/hello-world")).getType()
-				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("uri-example"));
-		task.addInput().setValue(new Reference("http://hl7.org/fhir/Patient/example-id")).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("reference-example"));
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("uri-example")
+						.setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new Reference("http://hl7.org/fhir/Patient/example-id")).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("reference-example").setVersion(def.getResourceVersion()));
 		task.addInput()
 				.setValue(new Reference().setType("Patient")
 						.setIdentifier(new Identifier().setSystem("http://dsf.dev/sid/hello-world-identifier")
 								.setValue("identifier-value")))
 				.getType().addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
-						.setCode("reference-identifier-example"));
+						.setCode("reference-identifier-example").setVersion(def.getResourceVersion()));
 		task.addInput()
 				.setValue(new Identifier().setSystem("http://dsf.dev/sid/hello-world-identifier")
 						.setValue("identifier-value"))
 				.getType().addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
-						.setCode("identifier-example"));
+						.setCode("identifier-example").setVersion(def.getResourceVersion()));
 		task.addInput()
 				.setValue(
 						new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("coding-example"))
-				.getType().addCoding(
-						new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("coding-example"));
+				.getType().addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("coding-example").setVersion(def.getResourceVersion()));
 		task.addInput()
 				.setValue(new Quantity().setSystem("http://unitsofmeasure.org").setCode("m").setUnit("m").setValue(1)
 						.setComparator(Quantity.QuantityComparator.LESS_OR_EQUAL))
 				.getType().addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
-						.setCode("quantity-example"));
+						.setCode("quantity-example").setVersion(def.getResourceVersion()));
 
 		ValidationResult result = resourceValidator.validate(task);
 		ValidationSupportRule.logValidationMessages(logger, result);
@@ -120,7 +128,7 @@ public class TaskProfileTest
 	{
 		Task task = new Task();
 		task.getMeta().addProfile("http://dsf.dev/fhir/StructureDefinition/task-hello-world");
-		task.setInstantiatesCanonical("http://dsf.dev/bpe/Process/helloWorld|" + def.getVersion());
+		task.setInstantiatesCanonical("http://dsf.dev/bpe/Process/helloWorld|" + def.getResourceVersion());
 		task.setStatus(TaskStatus.REQUESTED);
 		task.setIntent(TaskIntent.ORDER);
 		task.setAuthoredOn(new Date());
@@ -132,10 +140,12 @@ public class TaskProfileTest
 		task.addInput().setValue(new StringType("helloWorld")).getType()
 				.addCoding(CodeSystems.BpmnMessage.messageName());
 
-		task.addInput().setValue(new StringType("string-value")).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("string-example"));
-		task.addInput().setValue(new IntegerType(1)).getType().addCoding(
-				new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world").setCode("integer-example"));
+		task.addInput().setValue(new StringType("string-value")).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("string-example").setVersion(def.getResourceVersion()));
+		task.addInput().setValue(new IntegerType(1)).getType()
+				.addCoding(new Coding().setSystem("http://dsf.dev/fhir/CodeSystem/hello-world")
+						.setCode("integer-example").setVersion(def.getResourceVersion()));
 
 		return task;
 	}
