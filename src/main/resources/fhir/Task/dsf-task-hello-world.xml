@@ -166,19 +166,19 @@
 			<code value="coding-example" />
 		</valueCoding>
 	</input>
-  <input>
-    <type>
-      <coding>
-        <system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
-        <code value="quantity-example" />
-      </coding>
-    </type>
-    <valueQuantity>
-      <comparator value="&lt;=" />
-      <value value="10" />
-      <unit value="m" />
-      <system value="http://unitsofmeasure.org" />
-      <code value="m" />
-    </valueQuantity>
-  </input>
+	<input>
+		<type>
+			<coding>
+				<system value="http://dsf.dev/fhir/CodeSystem/hello-world" />
+				<code value="quantity-example" />
+			</coding>
+		</type>
+		<valueQuantity>
+			<comparator value="&lt;=" />
+			<value value="10" />
+			<unit value="m" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="m" />
+		</valueQuantity>
+	</input>
 </Task>
