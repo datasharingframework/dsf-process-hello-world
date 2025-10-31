@@ -1,36 +1,26 @@
 package dev.dsf.bpe.spring.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
-import ca.uhn.fhir.context.FhirContext;
+import dev.dsf.bpe.listener.ProcessPluginDeploymentListenerImpl;
 import dev.dsf.bpe.service.HelloWorld;
 import dev.dsf.bpe.service.LogUserTaskResponse;
-import dev.dsf.bpe.v1.ProcessPluginApi;
+import dev.dsf.bpe.v2.ProcessPluginDeploymentListener;
+import dev.dsf.bpe.v2.spring.ActivityPrototypeBeanCreator;
 
 @Configuration
 public class HelloWorldConfig
 {
-	@Autowired
-	private ProcessPluginApi api;
-
-	@Autowired
-	private FhirContext fhirContext;
-
 	@Bean
-	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-	public HelloWorld helloWorld()
+	public static ActivityPrototypeBeanCreator activityPrototypeBeanCreator()
 	{
-		return new HelloWorld(api);
+		return new ActivityPrototypeBeanCreator(HelloWorld.class, LogUserTaskResponse.class);
 	}
 
 	@Bean
-	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-	public LogUserTaskResponse logUserTaskResponse()
+	public ProcessPluginDeploymentListener deploymentListener()
 	{
-		return new LogUserTaskResponse(api, fhirContext);
+		return new ProcessPluginDeploymentListenerImpl();
 	}
 }

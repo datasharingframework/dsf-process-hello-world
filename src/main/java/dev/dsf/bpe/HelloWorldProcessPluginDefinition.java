@@ -1,36 +1,13 @@
 package dev.dsf.bpe;
 
-import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 import dev.dsf.bpe.spring.config.HelloWorldConfig;
-import dev.dsf.bpe.v1.ProcessPluginDefinition;
+import dev.dsf.bpe.v2.AbstractProcessPluginDefinition;
 
-public class HelloWorldProcessPluginDefinition implements ProcessPluginDefinition
+public class HelloWorldProcessPluginDefinition extends AbstractProcessPluginDefinition
 {
-	public static final String VERSION = "2.0.0.0";
-	public static final LocalDate RELEASE_DATE = LocalDate.of(2023, 5, 20);
-
-	@Override
-	public String getName()
-	{
-		return "dsf-process-hello-world";
-	}
-
-	@Override
-	public String getVersion()
-	{
-		return VERSION;
-	}
-
-	@Override
-	public LocalDate getReleaseDate()
-	{
-		return RELEASE_DATE;
-	}
-
 	@Override
 	public List<String> getProcessModels()
 	{
@@ -61,9 +38,7 @@ public class HelloWorldProcessPluginDefinition implements ProcessPluginDefinitio
 
 		var vHelloWorld = "fhir/ValueSet/dsf-hello-world.xml";
 
-		return Map.of(ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_USER,
-				Arrays.asList(aHelloUser, qHelloWorld, sHelloUser, tHelloUser),
-				ConstantsHelloWorld.PROCESS_NAME_FULL_HELLO_WORLD,
-				Arrays.asList(aHelloWorld, cHelloWorld, sHelloWorld, tHelloWorld, vHelloWorld));
+		return Map.of("dsfdev_helloUser", List.of(aHelloUser, qHelloWorld, sHelloUser, tHelloUser), "dsfdev_helloWorld",
+				List.of(aHelloWorld, cHelloWorld, sHelloWorld, tHelloWorld, vHelloWorld));
 	}
 }
