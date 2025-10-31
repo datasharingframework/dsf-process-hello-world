@@ -27,12 +27,14 @@ public class ActivityDefinitionProfileTest
 	@ClassRule
 	public static final ValidationSupportRule validationRule = new ValidationSupportRule(pluginDefinition.getVersion(),
 			pluginDefinition.getReleaseDate(),
-			Arrays.asList("dsf-activity-definition-2.0.0.xml", "dsf-extension-process-authorization-2.0.0.xml",
+			Arrays.asList("dsf-extension-read-access-organization-2.0.0.xml",
+					"dsf-extension-read-access-parent-organization-role-2.0.0.xml", "dsf-meta-2.0.0.xml",
+					"dsf-extension-process-authorization-2.0.0.xml",
+					"dsf-extension-process-authorization-practitioner-2.0.0.xml",
 					"dsf-extension-process-authorization-organization-2.0.0.xml",
 					"dsf-extension-process-authorization-organization-practitioner-2.0.0.xml",
 					"dsf-extension-process-authorization-parent-organization-role-2.0.0.xml",
 					"dsf-extension-process-authorization-parent-organization-role-practitioner-2.0.0.xml",
-					"dsf-extension-process-authorization-practitioner-2.0.0.xml",
 					"dsf-coding-process-authorization-local-all-2.0.0.xml",
 					"dsf-coding-process-authorization-local-all-practitioner-2.0.0.xml",
 					"dsf-coding-process-authorization-local-organization-2.0.0.xml",
@@ -40,13 +42,14 @@ public class ActivityDefinitionProfileTest
 					"dsf-coding-process-authorization-local-parent-organization-role-2.0.0.xml",
 					"dsf-coding-process-authorization-local-parent-organization-role-practitioner-2.0.0.xml",
 					"dsf-coding-process-authorization-remote-all-2.0.0.xml",
+					"dsf-coding-process-authorization-remote-organization-2.0.0.xml",
 					"dsf-coding-process-authorization-remote-parent-organization-role-2.0.0.xml",
-					"dsf-coding-process-authorization-remote-organization-2.0.0.xml"),
-			Arrays.asList("dsf-organization-role-1.0.0.xml", "dsf-practitioner-role-1.0.0.xml",
-					"dsf-process-authorization-1.0.0.xml", "dsf-read-access-tag-1.0.0.xml", "dsf-hello-world.xml"),
-			Arrays.asList("dsf-organization-role-1.0.0.xml", "dsf-practitioner-role-1.0.0.xml",
-					"dsf-process-authorization-recipient-1.0.0.xml", "dsf-process-authorization-requester-1.0.0.xml",
-					"dsf-read-access-tag-1.0.0.xml", "dsf-hello-world.xml"));
+					"dsf-activity-definition-2.0.0.xml"),
+			Arrays.asList("dsf-organization-role-2.0.0.xml", "dsf-practitioner-role-2.0.0.xml",
+					"dsf-process-authorization-2.0.0.xml", "dsf-read-access-tag-2.0.0.xml", "dsf-hello-world.xml"),
+			Arrays.asList("dsf-organization-role-2.0.0.xml", "dsf-practitioner-role-2.0.0.xml",
+					"dsf-process-authorization-recipient-2.0.0.xml", "dsf-process-authorization-requester-2.0.0.xml",
+					"dsf-read-access-tag-2.0.0.xml", "dsf-hello-world.xml"));
 
 	private final ResourceValidator resourceValidator = new ResourceValidatorImpl(validationRule.getFhirContext(),
 			validationRule.getValidationSupport());

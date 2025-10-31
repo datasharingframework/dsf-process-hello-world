@@ -46,9 +46,9 @@ public class TaskProfileTest
 	@ClassRule
 	public static final ValidationSupportRule validationRule = new ValidationSupportRule(def.getResourceVersion(),
 			def.getReleaseDate(),
-			Arrays.asList("dsf-task-base-2.0.0.xml", "dsf-task-hello-world.xml", "dsf-task-hello-user.xml"),
-			Arrays.asList("dsf-read-access-tag-1.0.0.xml", "dsf-bpmn-message-1.0.0.xml", "dsf-hello-world.xml"),
-			Arrays.asList("dsf-read-access-tag-1.0.0.xml", "dsf-bpmn-message-1.0.0.xml", "dsf-hello-world.xml"));
+			Arrays.asList("dsf-task-2.0.0.xml", "dsf-task-hello-world.xml", "dsf-task-hello-user.xml"),
+			Arrays.asList("dsf-read-access-tag-2.0.0.xml", "dsf-bpmn-message-2.0.0.xml", "dsf-hello-world.xml"),
+			Arrays.asList("dsf-read-access-tag-2.0.0.xml", "dsf-bpmn-message-2.0.0.xml", "dsf-hello-world.xml"));
 
 	private ResourceValidator resourceValidator = new ResourceValidatorImpl(validationRule.getFhirContext(),
 			validationRule.getValidationSupport());
