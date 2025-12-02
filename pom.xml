@@ -9,13 +9,13 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.build.outputTimestamp>2025-11-04T20:15:00Z</project.build.outputTimestamp>
+		<project.build.outputTimestamp>2025-21-02T17:25:00Z</project.build.outputTimestamp>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>25</maven.compiler.source>
 		<maven.compiler.target>25</maven.compiler.target>
 		<maven.compiler.release>25</maven.compiler.release>
 
-		<dsf.version>2.0.0-RC1</dsf.version>
+		<dsf.version>2.0.1</dsf.version>
 		<dsf.location>../dsf</dsf.location>
 	</properties>
 
@@ -106,7 +106,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.4.0</version>
 				<configuration>
 					<propertiesEncoding>UTF-8</propertiesEncoding>
 				</configuration>
@@ -119,6 +119,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<!-- 4.0.0 not working with eclipse, see https://github.com/eclipse-m2e/m2e-core/issues/2084 -->
 				<version>3.4.2</version>
 				<configuration>
 					<archive>
@@ -236,7 +237,7 @@
 									<pluginExecutionFilter>
 										<groupId>dev.dsf</groupId>
 										<artifactId>dsf-maven-plugin</artifactId>
-										<versionRange>[2.0.0-SNAPSHOT,)</versionRange>
+										<versionRange>${dsf.version}</versionRange>
 										<goals>
 											<goal>generate-config-doc</goal>
 										</goals>
