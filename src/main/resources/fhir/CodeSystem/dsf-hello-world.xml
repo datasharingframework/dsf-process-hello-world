@@ -1,5 +1,6 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<meta>
+		<profile value="http://dsf.dev/fhir/StructureDefinition/code-system" />
 		<tag>
 			<system value="http://dsf.dev/fhir/CodeSystem/read-access-tag" />
 			<code value="ALL" />
@@ -86,4 +87,14 @@
 		<display value="Coding Example" />
 		<definition value="Example coding input value" />
 	</concept>
-</CodeSystem> 
+	<concept>
+		<code value="questionnaire-response-reference" />
+		<display value="QuestionnaireResponse Reference" />
+		<definition value="QuestionnaireResponse reference input value" />
+	</concept>
+	<concept>
+		<code value="quantity-example" />
+		<display value="Quantity Example" />
+		<definition value="Example quantity input value" />
+	</concept>
+</CodeSystem>

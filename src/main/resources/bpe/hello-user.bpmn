@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1yb5vw3" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1yb5vw3" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.38.1">
   <bpmn:process id="dsfdev_helloUser" isExecutable="true" camunda:versionTag="#{version}">
     <bpmn:sequenceFlow id="SequenceFlow_0bbhq2r" sourceRef="StartEvent_1" targetRef="userTask" />
     <bpmn:endEvent id="EndEvent_0xd0x8k">
@@ -11,6 +11,22 @@
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_00nx7hv" sourceRef="userTask" targetRef="logUserTaskRespose" />
     <bpmn:userTask id="userTask" name="User Task" camunda:formKey="http://dsf.dev/fhir/Questionnaire/hello-user|#{version}">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="dev.dsf.bpe.v2.activity.DefaultUserTaskListener" event="create" id="">
+          <camunda:field name="practitionerRole">
+            <camunda:string>DIC_USER</camunda:string>
+          </camunda:field>
+          <camunda:field name="taskOutputSystem">
+            <camunda:string>http://dsf.dev/fhir/CodeSystem/hello-world</camunda:string>
+          </camunda:field>
+          <camunda:field name="taskOutputCode">
+            <camunda:string>questionnaire-response-reference</camunda:string>
+          </camunda:field>
+          <camunda:field name="taskOutputVersion">
+            <camunda:string>#{version}</camunda:string>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0bbhq2r</bpmn:incoming>
       <bpmn:outgoing>Flow_00nx7hv</bpmn:outgoing>
     </bpmn:userTask>
@@ -23,20 +39,11 @@
   <bpmn:message id="Message_1nn2wdw" name="helloUser" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="dsfdev_helloUser">
-      <bpmndi:BPMNEdge id="Flow_034bfq7_di" bpmnElement="Flow_034bfq7">
-        <di:waypoint x="520" y="121" />
-        <di:waypoint x="612" y="121" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_00nx7hv_di" bpmnElement="Flow_00nx7hv">
-        <di:waypoint x="360" y="121" />
-        <di:waypoint x="420" y="121" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_0bbhq2r_di" bpmnElement="SequenceFlow_0bbhq2r">
-        <di:waypoint x="188" y="121" />
-        <di:waypoint x="260" y="121" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="EndEvent_0xd0x8k_di" bpmnElement="EndEvent_0xd0x8k">
         <dc:Bounds x="612" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0x5gijn_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="103" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_06hqzi2_di" bpmnElement="userTask">
         <dc:Bounds x="260" y="81" width="100" height="80" />
@@ -46,9 +53,18 @@
         <dc:Bounds x="420" y="81" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="StartEvent_0x5gijn_di" bpmnElement="StartEvent_1">
-        <dc:Bounds x="152" y="103" width="36" height="36" />
-      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0bbhq2r_di" bpmnElement="SequenceFlow_0bbhq2r">
+        <di:waypoint x="188" y="121" />
+        <di:waypoint x="260" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00nx7hv_di" bpmnElement="Flow_00nx7hv">
+        <di:waypoint x="360" y="121" />
+        <di:waypoint x="420" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_034bfq7_di" bpmnElement="Flow_034bfq7">
+        <di:waypoint x="520" y="121" />
+        <di:waypoint x="612" y="121" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
